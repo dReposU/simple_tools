@@ -8,7 +8,7 @@ Puedes buscar el archivo en el repo y copiar el URL del buscador.
 
 **Ejemplo:**
 ```
-https://github.com/dReposU/ML/blob/main/shh_config.ipynb
+https://github.com/dReposU/simple_tools/blob/main/ssh_config.ipynb
 ->
-https://colab.research.google.com/github/dReposU/ML/blob/main/shh_config.ipynb
+https://colab.research.google.com/github/dReposU/simple_tools/blob/main/ssh_config.ipynb
 ```
