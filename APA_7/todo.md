@@ -1,0 +1,3 @@
+ - [] Función para ordenar las referencias alfabéticamente. E imprimiéndolas con el formato original. La idea es que a partir de unas referencias con el formato adecuado, la función sea capaz de ordenarlas y colocarlas en el informe.
+ - [] Función para enumerar tablas. Una variación de la función para enumerar figuras. 
+ - [] Documentación. Ejemplos de input y output (Docs), lo básico de appscript (PC y móvil), explicación de código si se precisa.
