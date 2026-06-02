@@ -1,10 +1,6 @@
 - [] Update index of the references [1], [2], ...
 - [] Given a .md (or maybe can be an integrated extension) search for citations. Citations must follow this format _[#]_ where # is a number. Also these must be before a given heading like `# References`. When updating the index the program must be aware of citations.  
 
-Note: the implementation accepts a `reference_heading` parameter (default `References`). For testing we use `# ThisHeadingForReference` as the heading to find the references block. The tool scans the whole document for citation tokens of the form `_[label]_` (both before and after the references heading) and updates them to the new numeric values.
-
-When reference entries are added without numeric labels (for example `[a]` or `[]`), the program will order those added entries alphabetically by their entry content and place them before the numeric entries. Numeric-labeled entries keep their block order and are renumbered after the added entries.
-
 **Input:**  
 As said in \_[2]\_.  
 
