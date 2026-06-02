@@ -1,5 +1,7 @@
+# Features
+
 - [] Update index of the references [1], [2], ...
-- [] Given a .md (or maybe can be an integrated extension) search for citations. Citations must follow this format _[#]_ where # is a number. Also these must be before a given heading like `# References`. When updating the index the program must be aware of citations.  
+- [] Given a .md (or maybe can be an integrated extension) search for citations. Citations must follow this format `_[#]_` where # is a number. Also these must be before a given heading like `# References`. When updating the index the program must be aware of citations.  
 
 **Input:**  
 As said in \_[2]\_.  
@@ -18,6 +20,50 @@ As said in \_[3]\_.
 [3] I  
 
 - [] Changing order of references. 
+
+**Alternative 2 (best):** Changing them with alt + and number them automatically.  
+**Input:**  
+As said in \_[3]\_.
+
+[3] I  
+[2] G   
+[] H   
+[1] F   
+
+**Output:**  
+As said in \_[1]\_.
+
+[1] I  
+[2] G   
+[3] H  
+[4] F  
+
+- [] Handling numeric labels for early citations.  
+
+**Input:**  
+As said in \_[a]\_.
+
+[3] I   
+[2] G    
+[a] Z  
+[] H    
+[1] F    
+
+**Output:**  
+As said in \_[3]\_.
+
+[1] I  
+[2] G   
+[3] Z  
+[4] H  
+[5] F  
+
+- [] Update de indexes in-place. Do not create a new `.md` file to not lose git's tracking.  
+- [] Making an extension for VSC.
+
+# Extra
+
+Discarted ideas.
 
 Given  
 [1] F   
@@ -55,22 +101,3 @@ As said in \_[1]\_.
 [2] G   
 [3] H  
 [4] F  
-
-**Alternative 2 (best):** Changing them with alt + and number them automatically.  
-**Input:**  
-As said in \_[3]\_.
-
-[3] I 
-[2] G  
-[] H  
-[1] F  
-
-**Output:**  
-As said in \_[1]\_.
-
-[1] I  
-[2] G   
-[3] H  
-[4] F  
-
-- [] Making an extension for VSC

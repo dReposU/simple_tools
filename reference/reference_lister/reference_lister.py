@@ -57,8 +57,6 @@ def renumber_entries(entries: List[Tuple[str, str, int]]) -> Tuple[List[str], Di
     for label, content, _ in entries:
         if label.isdigit():
             numeric.append((label, content))
-        else:
-            alpha.append((label, content))
 
     # sort added/unlabeled alphabetically by content
     alpha_sorted = sorted(alpha, key=lambda x: x[1].lower())

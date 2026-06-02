@@ -4,9 +4,11 @@ As said in _[1]_.
 
 # ThisHeadingForReference
 
-[b] Github. (n.d.). _foo_. GitHub Docs. Retrieved May 28, 2026, from foo
+[b] Github. (n.d.). _foo_. GitHub Docs. Retrieved May 28, 2026, from foo  
 
-[a] Github. (n.d.). _bar_. GitHub Docs. Retrieved May 28, 2026, from bar
+[] Github. (n.d.). _car_. GitHub Docs. Retrieved May 28, 2026, from car  
+
+[a] Github. (n.d.). _bar_. GitHub Docs. Retrieved May 28, 2026, from bar  
 
 [1] Github. (n.d.). _nar_. GitHub Docs. Retrieved May 28, 2026, from nar  
 
@@ -14,6 +16,11 @@ As said in _[1]_.
 
 [2] Github. (n.d.). _word_. GitHub Docs. Retrieved May 28, 2026, from word  
 
+[c] Github. (n.d.). _dart_. GitHub Docs. Retrieved May 28, 2026, from dart   
+
+[] Github. (n.d.). _go_. GitHub Docs. Retrieved May 28, 2026, from go   
+
+
 # SomeHeading
 
-As reviewed in _[a]_. Do not forget about [b].
+As reviewed in _[b]_. Do not forget about [a].
