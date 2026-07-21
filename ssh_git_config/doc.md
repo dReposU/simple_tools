@@ -1,5 +1,8 @@
 # Conexión a GitHub mediante SSH
 
+>[!TIP]  
+>Los comandos principales de esta guía están resumidos y parametrizados en el notebook [`ssh_config.ipynb`](./ssh_config.ipynb).
+
 El objetivo de esta guía es crear commits y enviar cambios desde una cuenta alternativa mediante SSH, mientras se mantiene iniciada la cuenta principal en el IDE para usar suscripciones como GitHub Copilot Pro. La cuenta del IDE, la identidad del autor de Git y la cuenta autenticada mediante SSH son configuraciones independientes.  
 
 # Cuenta con SSH en un repositorio nuevo  
