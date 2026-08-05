@@ -203,24 +203,18 @@ Después la verificamos en la interfaz de GitHub.
 
 ### 7. Introducir la passphrase una única vez por sesión
 
-Para agilizar el proceso de desarrollo, podemos iniciar un agente y añadir la clave. Solo tendremos que introducir la passphrase una vez durante esa sesión de Git Bash. Para evitar escribir manualmente las rutas, podemos copiarlas desde la terminal y desde el archivo de configuración.
+Para agilizar el proceso de desarrollo, podemos iniciar un agente y añadir la clave. Solo tendremos que introducir la passphrase una vez durante esa sesión de Git Bash. Para evitar escribir manualmente los datos de la cuenta, podemos copiar el alias y `IdentityFile` desde el archivo de configuración y recuperarlos del historial del portapapeles con `Windows + V`.
 
 ```bash
-pwd | clip
-# Copiar la ruta del repositorio actual al portapapeles.
-
-cd ~/.ssh
-nano config
-# Copiar el valor de IdentityFile correspondiente a la cuenta.
-
-cd "<ruta_del_repositorio_copiada>"
-# Sustituir el texto entre ángulos pegando la ruta con Windows + V.
+nano ~/.ssh/config
+# Copiar el alias y el valor de IdentityFile correspondientes a la cuenta.
+# Usar Windows + V para recuperarlos cuando se necesiten.
 
 eval "$(ssh-agent -s)"
 # Iniciar un agente
 
 ssh-add IdentityFile_copiado
-# Sustituir IdentityFile_copiado pegando el valor copiado desde config.
+# Sustituir IdentityFile_copiado pegando con Windows + V el valor copiado desde config.
 
 # Introducir la passphrase
 
