@@ -87,6 +87,45 @@ git clone <repository-url> "C:\Users\user\Projects\agent-skills"
 
 ## Link the custom skills
 
+### Create Codex skill symbolic links on Windows
+
+Open PowerShell and set the repository path. The following script finds every
+top-level directory containing a `SKILL.md` file and links it into Codex's
+personal custom-skills directory, `%USERPROFILE%\.agents\skills`:
+
+```powershell
+$skillsRepo = "C:\Users\user\Projects\agent-skills"
+$codexSkills = Join-Path $env:USERPROFILE ".agents\skills"
+
+New-Item -ItemType Directory -Force -Path $codexSkills | Out-Null
+
+Get-ChildItem -LiteralPath $skillsRepo -Directory | Where-Object {
+    Test-Path -LiteralPath (Join-Path $_.FullName "SKILL.md")
+} | ForEach-Object {
+    $linkPath = Join-Path $codexSkills $_.Name
+    $existingPath = Get-Item -LiteralPath $linkPath `
+        -Force -ErrorAction SilentlyContinue
+
+    if ($null -ne $existingPath) {
+        Write-Warning "Skipping existing path: $linkPath"
+    }
+    else {
+        New-Item -ItemType SymbolicLink `
+            -Path $linkPath `
+            -Target $_.FullName | Out-Null
+    }
+}
+```
+
+Run the script again after adding new skills. Existing files, directories, and
+links are skipped, so the script creates links only for skills that have not
+already been linked.
+
+On Windows, run PowerShell as an administrator or enable Windows Developer
+Mode so that a non-elevated PowerShell process can create symbolic links.
+
+### Link all skills to Codex and Claude Code
+
 Codex explicitly supports symlinked skill folders. Linking each skill folder
 individually is safer than replacing an agent's entire skills directory: it
 preserves bundled or separately installed skills and avoids collisions.
