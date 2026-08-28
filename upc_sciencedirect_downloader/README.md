@@ -1,6 +1,6 @@
 # UPC ScienceDirect downloader
 
-This tool opens the UPC-proxied ScienceDirect article in a visible local browser. You complete the UPC or Microsoft sign-in directly in that browser; after ScienceDirect exposes the article, the tool downloads the PDF with the authenticated session.
+This tool first tries a known official Elsevier open-access PDF endpoint. When no such endpoint is configured or it fails, the tool opens the UPC-proxied ScienceDirect article in a visible local browser. You complete the UPC or Microsoft sign-in directly in that browser; after ScienceDirect exposes the article, the tool downloads the PDF with the authenticated session.
 
 The script does **not** ask for, inspect, print, or save your username or password. Its browser profile is created in the operating system's temporary directory and deleted when the run ends. Downloaded PDFs and local dependencies are excluded from Git.
 
@@ -31,6 +31,7 @@ Optional arguments:
 
 ```text
 --output <directory>       Choose the download directory
+--fallback-url <url>       Try an official elsevier.es PDF URL before UPC login
 --timeout-minutes <number> Change the 15-minute login timeout
 --help                     Show command help
 ```
