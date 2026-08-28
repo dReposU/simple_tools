@@ -1,2 +1,5 @@
 .agents/
 t/
+upc_sciencedirect_downloader/node_modules/
+upc_sciencedirect_downloader/downloads/
+upc_sciencedirect_downloader/.browser-profile/

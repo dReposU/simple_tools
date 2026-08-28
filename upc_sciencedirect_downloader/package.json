@@ -1,0 +1,14 @@
+{
+  "name": "upc-sciencedirect-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Download an authorized ScienceDirect PDF through the UPC proxy using an interactive local browser session.",
+  "type": "module",
+  "scripts": {
+    "start": "node download.mjs",
+    "check": "node --check download.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}
