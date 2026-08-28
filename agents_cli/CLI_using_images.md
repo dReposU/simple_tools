@@ -25,8 +25,3 @@ you may need to call each image individually?
 How are the images being processed? How does codex know if it is image 1 or 2 when calling them in the .md
 
 **Best solution for now:** second. Isolated terminal in CCPA using image attachments and ctrl + j to create newlines.
-
-![alt text](image.png)
-
-![alt text](image-1.png)
-
