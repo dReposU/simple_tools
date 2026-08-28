@@ -44,5 +44,21 @@ You can also invoke it explicitly by typing `$` and selecting the skill. Codex
 normally detects changes automatically; restart Codex if a new or updated skill
 does not appear.
 
+## Require explicit invocation
+
+If a skill should run only when the user explicitly selects it, add
+`agents/openai.yaml` inside the skill directory:
+
+```yaml
+policy:
+  allow_implicit_invocation: false
+```
+
+![alt](assets/2026-08-27-19-55-41.png)  
+
+This policy is important because `SKILL.md` wording alone does not disable
+automatic matching. It prevents Codex from selecting the skill implicitly while
+keeping explicit `$skill-name` invocation available.
+
 For the complete format and optional `scripts`, `references`, and `assets`
 directories, see the [official OpenAI guide to building skills](https://learn.chatgpt.com/docs/build-skills).
