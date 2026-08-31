@@ -16,6 +16,7 @@ or IDE may intercept some key combinations.
 | `Ctrl+E` | Move to the end of the line. |
 | `Alt+B` | Move one word backward. |
 | `Alt+F` | Move one word forward. |
+| `Alt+D` / `Ctrl+Delete` | Delete the word after the cursor. |
 | `Ctrl+R` | Search backward through prompt history. |
 | `Up` / `Down` | Move through previous prompts or history matches. |
 | `Shift+Enter` | Insert a newline without submitting the prompt. |
